@@ -106,7 +106,15 @@ class TeamViewer::Client
   def meeting_delete(id)
     delete "meetings/#{id}"
   end
-
+  
+  #----------------#
+  #--- Devices  ---#
+  #----------------#
+  
+  def devices(params = nil)
+    get 'devices', params
+  end
+  
 private
 
   def full_path(resource)
